@@ -6,13 +6,13 @@ extern Adafruit_NeoPixel strip;
 void Napisz_Spacje(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   strip.setPixelColor(i, 0);
 }
 void Napisz_A(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<8){x=x+8;}
+  if(x<8) {x=x+8;}
   if((j==1) || (j==5))
   {
     if(x==15)
@@ -265,7 +265,7 @@ void Napisz_G(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_H(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if( (j==1) || (j==5))
   {
     strip.setPixelColor(i, c);
@@ -290,7 +290,7 @@ void Napisz_H(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_I(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if( (j==3))
   {
     strip.setPixelColor(i, c);
@@ -303,7 +303,7 @@ void Napisz_I(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_J(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if(j==5)
   {
     strip.setPixelColor(i, c);
@@ -351,7 +351,7 @@ void Napisz_J(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_K(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if(j==1)
   {
     strip.setPixelColor(i, c);
@@ -409,7 +409,7 @@ void Napisz_K(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_L(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if(j==1)
   {
     strip.setPixelColor(i, c);
@@ -434,7 +434,7 @@ void Napisz_L(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_M(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if((j==1) || (j==5))
   {
     strip.setPixelColor(i, c);
@@ -469,7 +469,7 @@ void Napisz_M(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_N(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if( (j==1) || (j==5) )
   {
     strip.setPixelColor(i, c);
@@ -517,7 +517,7 @@ void Napisz_O(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
   if(x<8){x=x+8;}
-  else if(j==6)
+  if(j==6)
   {
     strip.setPixelColor(i, 0);
   }
@@ -696,7 +696,7 @@ void Napisz_S(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_T(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if(j==3)
   {
     strip.setPixelColor(i, c);
@@ -721,7 +721,7 @@ void Napisz_T(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_U(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if((j==1) || (j==5))
   {
     if(x==9)
@@ -753,7 +753,7 @@ void Napisz_U(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_W(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if((j==1) || (j==5))
   {
     strip.setPixelColor(i, c);
@@ -789,7 +789,7 @@ void Napisz_W(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_Y(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if((j==1) || (j==5))
   {
     if((x==14) || (x==15))
@@ -832,14 +832,14 @@ void Napisz_Y(int i, int j, uint32_t c, uint8_t wait)
 void Napisz_Z(int i, int j, uint32_t c, uint8_t wait)
 {
   int x = i;
-  if(x<9) {x=x+7;}
+  if(x<8){x=x+8;}
   if(j==6)
   {
     strip.setPixelColor(i, 0);
   }
   else
   {
-    if((x==9) || (x=9+j) || (x==15))
+    if((x==9) || (x==9+j) || (x==15))
     {
       strip.setPixelColor(i, c);
     }
