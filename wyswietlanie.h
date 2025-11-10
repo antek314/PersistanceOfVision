@@ -28,6 +28,17 @@ void Napisz(uint32_t c, uint8_t wait, char znak, int i, int j)
   if(znak == 'w'){Napisz_W(i , j, c, wait);}
   if(znak == 'y'){Napisz_Y(i , j, c, wait);}
   if(znak == 'z'){Napisz_Z(i , j, c, wait);}
+
+  if(znak == '1'){Napisz_A(i , j, c, wait);}
+  if(znak == '2'){Napisz_B(i , j, c, wait);}
+  if(znak == '3'){Napisz_C(i , j, c, wait);}
+  if(znak == '4'){Napisz_D(i , j, c, wait);}
+  if(znak == '5'){Napisz_E(i , j, c, wait);}
+  if(znak == '6'){Napisz_F(i , j, c, wait);}
+  if(znak == '7'){Napisz_G(i , j, c, wait);}
+  if(znak == '8'){Napisz_H(i , j, c, wait);}
+  if(znak == '9'){Napisz_I(i , j, c, wait);}
+  if(znak == '0'){Napisz_J(i , j, c, wait);}
 }
 
 
