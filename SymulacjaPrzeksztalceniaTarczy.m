@@ -1,3 +1,4 @@
+clc; close all;
 bitmapa = [[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
  [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
  [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
@@ -49,49 +50,88 @@ bitmapa = [[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
  [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
  [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0]]
 bitmapa_przeksztalcona = zeros(34, 108);
+
+tablica_wynikow=zeros(4,3000);
+
+
+figure;
+hold on;
+axis equal;
+xlabel('X');
+ylabel('Y');
+
+for c = 1:size(bitmapa, 2)
+    for r = 1:size(bitmapa, 1)
+        if bitmapa(r, c) == 1
+            plot(r, c, 'r.', 'MarkerSize', 10);  
+        end
+    end
+end
+
+
 for a = 1:50;
     for b = 1:50;
         if bitmapa(a,b)==1
             x = a-25;
             y = b-25;
-%            if (x>0) || (x <= 0)
-                if (x>0) && (y>=0)
-                    phi = atan(y/x);
-                end
-                if (x>0) && (y<0)
-                    phi = atan(y/x) + 6.28;
-                end
-                if x<0
-                    phi = atan(y/x) + 3.14;
-                end
-                if (x==0) && (y>0)
-                    phi = 3.14/2;
-                end
-                if (x==0) && (y<0)
-                    phi = 3.14 * 3/2;
-                end
-                promien = round(sqrt((x*x) + (y*y)));
-                wyn = round(phi / 0.05815);
-                bitmapa_przeksztalcona(promien, wyn+1) = 1;
-                if wyn+1 == 40
-                    fprintf('wyn=%d, promien=%d, x=%d, y=%d, phi=%.4f\n', wyn, promien, x, y, phi);
-                end
-            %end
+            if (x>0) && (y>=0)
+                phi = atan(y/x);
+            end
+            if (x>0) && (y<0)
+                phi = atan(y/x) + 6.28;
+            end
+            if x<0
+                phi = atan(y/x) + 3.14;
+            end
+            if (x==0) && (y>0)
+                phi = 3.14/2;
+            end
+            if (x==0) && (y<0)
+                phi = 3.14 * 3/2;
+            end
+            promien = round(sqrt((x*x) + (y*y)));
+            wyn = round(phi / 0.05815);
+            bitmapa_przeksztalcona(promien, wyn+1) = 1;
+            tablica_wynikow(1, a*b) = x
+            tablica_wynikow(2, a*b) = y
+            tablica_wynikow(3, a*b) = promien
+            tablica_wynikow(4, a*b) = wyn
+
+
+            if wyn+1 == 40
+                fprintf('wyn=%d, promien=%d, x=%d, y=%d, phi=%.4f\n', wyn, promien, x, y, phi);
+            end
         end
     end
 end
-figure;            % nowy wykres
-hold on;           % zatrzymaj rysunek, żeby dodawać kolejne punkty
-axis equal;        % proporcje osi 1:1
+
+for ccc = 1:tablica_wynikow(2)
+    for ggg = 1:tablica_wynikow(2)
+        if (tablica_wynikow(3, ggg) == tablica_wynikow(3, ccc)) && (tablica_wynikow(4, ggg) == tablica_wynikow(4, ccc))
+            tablica_wynikow(:, ggg)=[];
+            break;
+        end
+    end
+end
+% for sss = 1:tablica_wynikow(2)
+%     if tablica_wynikow(:,sss != 0)
+%         tablica = tablica_wynikow(:, sss)=[];
+%     end
+% end
+
+figure;
+hold on;
+axis equal;
 xlabel('X');
 ylabel('Y');
+title('Obszar wyświetlacza na tle wyliczonych wartości', 'FontSize', 14, 'FontWeight', 'bold');
 
 for c = 1:size(bitmapa_przeksztalcona, 2)
     for r = 1:size(bitmapa_przeksztalcona, 1)
         if bitmapa_przeksztalcona(r, c) == 1
             x = r*cos(c*(360/108)*(pi/180));
             y = r*sin(c*(360/108)*(pi/180));
-            plot(x, y, 'r.', 'MarkerSize', 10);  
+            plot(x, y, '.', 'MarkerSize', 8, 'Color', [1 0.5 0]);
         end
     end
 end
@@ -102,21 +142,69 @@ for s = 1:size(bitmapa, 2)
         end
     end
 end
-theta = linspace(0, 2*pi, 360);   % 360 punktów na okręgu
-r1 = 9+16;
-r2 = 9;
+
+
+
+
+theta = linspace(0, 2*pi, 360);
+r1 = 9 + 16;  % Promień 25
+r2 = 9;       % Promień 9
+r3 = 34;      % Promień 34
+
+% Oblicz współrzędne okręgów
 x1 = r1 * cos(theta);
 y1 = r1 * sin(theta);
 x2 = r2 * cos(theta);
 y2 = r2 * sin(theta);
+x3 = r3 * cos(theta);
+y3 = r3 * sin(theta);
 
-plot(x1, y1, 'b-', 'LineWidth', 1.5);   % niebieski okrąg o promieniu 25
-plot(x2, y2, 'g-', 'LineWidth', 1.5);   % zielony okrąg o promieniu 6
+% Utwórz nowe okno figurę
+%figure('Position', [100, 100, 800, 800]);
+%hold on;
+grid on;
+box on;
+
+% Narysuj okręgi z różnymi stylami
+plot(x1, y1, 'g-', 'LineWidth', 2.5, 'DisplayName', sprintf('r = %d', r1));
+plot(x2, y2, 'b--', 'LineWidth', 2, 'DisplayName', sprintf('r = %d', r2));
+plot(x3, y3, 'b-.', 'LineWidth', 2, 'DisplayName', sprintf('r = %d', r3));
+
+fill_0_r2_x = [0, x2, 0];
+fill_0_r2_y = [0, y2, 0];
+fill(fill_0_r2_x, fill_0_r2_y, [0.9, 0.5, 0.5], 'FaceAlpha', 0.23, 'EdgeColor', 'none', 'HandleVisibility', 'off');
+
+fill_r2_r1_x = [x2, fliplr(x1)];
+fill_r2_r1_y = [y2, fliplr(y1)];
+fill(fill_r2_r1_x, fill_r2_r1_y, [0.8, 0.8, 0.4], 'FaceAlpha', 0.45, 'EdgeColor', 'none', 'HandleVisibility', 'off');
+
+fill_r1_r3_x = [x1, fliplr(x3)];
+fill_r1_r3_y = [y1, fliplr(y3)];
+fill(fill_r1_r3_x, fill_r1_r3_y, [0.9, 0.5, 0.5], 'FaceAlpha', 0.23, 'EdgeColor', 'none', 'HandleVisibility', 'off');
+axis equal;
+xlim([-40, 40]);
+ylim([-40, 40]);
+
+grid on;
+grid minor;
+set(gca, 'GridLineStyle', ':', 'GridAlpha', 0.3, 'MinorGridLineStyle', ':', 'MinorGridAlpha', 0.1);
+
+
+phi = linspace(0, 2*pi, 8);
+for i = 1:length(phi)
+    plot([0, r3*cos(phi(i))], [0, r3*sin(phi(i))], 'k:', 'LineWidth', 0.5, 'HandleVisibility', 'off');
+end
+
+
+plot(0, 0, 'ro', 'MarkerSize', 1, 'MarkerFaceColor', 'r', 'DisplayName', 'Środek (0,0)');
+
+
+
 hold off;
 
 figure;
 hold on;
-axis equal;        % proporcje osi 1:1
+axis equal;
 xlabel('X');
 ylabel('Y');
 for c = 1:size(bitmapa_przeksztalcona, 2)
@@ -131,7 +219,7 @@ end
 
 figure;
 hold on;
-axis equal;        % proporcje osi 1:1
+axis equal;
 xlabel('X');
 ylabel('Y');
 bitmapa_final= zeros(16, 108);
@@ -153,9 +241,9 @@ for c = 1:size(bitmapa_final, 2)
     end
 end
 
-figure;            % nowy wykres
-hold on;           % zatrzymaj rysunek, żeby dodawać kolejne punkty
-axis equal;        % proporcje osi 1:1
+figure;
+hold on;
+axis equal;
 xlabel('X');
 ylabel('Y');
 
