@@ -1,0 +1,3392 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "3708e0e8-860a-414b-a956-0e6783e251a6")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:Battery_Cell"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BT"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Battery_Cell"
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 1.524 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 1.524 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single-cell battery"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "battery cell"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Battery_Cell_0_1"
+				(rectangle
+					(start -2.286 1.778)
+					(end 2.286 1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.524 1.016)
+					(end 1.524 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 3.048) (xy 1.778 3.048)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.556) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Battery_Cell_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:HallGenerator"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "HG"
+				(at 2.54 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "HallGenerator"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Hall effect generator"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Hall generator magnet"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "HallGenerator_0_1"
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 0.508) (xy 0.508 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -0.508) (xy 0.508 0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "HallGenerator_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 1.27)
+					(name "UH1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "U1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "U2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "UH2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "LED:NeoPixel_THT"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 5.08 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right bottom)
+				)
+			)
+			(property "Value" "NeoPixel_THT"
+				(at 1.27 -5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.27 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.adafruit.com/product/1938"
+				(at 2.54 -9.525 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "RGB LED NeoPixel addressable"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED*D5.0mm* LED*D8.0mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "NeoPixel_THT_0_0"
+				(text "RGB"
+					(at 2.286 -4.191 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+					)
+				)
+			)
+			(symbol "NeoPixel_THT_0_1"
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 1.778 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.556) (xy 1.778 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.524) (xy 1.27 -2.54) (xy 1.27 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -2.54) (xy 1.27 -3.556) (xy 1.27 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.683 -1.016) (xy 3.683 -3.556) (xy 3.683 -4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.699 -1.524) (xy 2.667 -1.524) (xy 3.683 -3.556) (xy 4.699 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.699 -3.556) (xy 2.667 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 5.08)
+					(end -5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "NeoPixel_THT_1_1"
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "DIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "DOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "MCU_Espressif:ESP32-C3"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U1"
+				(at 7.62 27.94 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ESP32-C3 mini"
+				(at 7.62 25.4 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm"
+				(at 0.508 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf"
+				(at 0.508 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "RF Module, ESP32 SoC, RISC-V, WiFi 802.11b/n/g, Bluetooth LE 5, QFN32"
+				(at 0.508 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "WiFi BLE ESP32 Espressif"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "QFN*1EP*5x5mm*P0.5mm*EP3.7x3.7mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "ESP32-C3_1_1"
+				(rectangle
+					(start -3.81 22.86)
+					(end 19.05 -13.97)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -10.16 25.4 270)
+					(length 2.54)
+					(hide yes)
+					(name "VDD3P3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -6.35 17.78 0)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -6.35 13.97 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -6.35 10.16 0)
+					(length 2.54)
+					(name "3.3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -6.35 6.35 0)
+					(length 2.54)
+					(name "GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -6.35 2.54 0)
+					(length 2.54)
+					(name "GPIO3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -6.35 -1.27 0)
+					(length 2.54)
+					(name "GPIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -6.35 -5.08 0)
+					(length 2.54)
+					(name "GPIO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -6.35 -8.89 0)
+					(length 2.54)
+					(name "GPIO0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 21.59 17.78 180)
+					(length 2.54)
+					(name "GPIO5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 21.59 13.97 180)
+					(length 2.54)
+					(name "GPIO6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 21.59 10.16 180)
+					(length 2.54)
+					(name "GPIO7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 21.59 6.35 180)
+					(length 2.54)
+					(name "GPIO8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 21.59 2.54 180)
+					(length 2.54)
+					(name "GPIO9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 21.59 -1.27 180)
+					(length 2.54)
+					(name "GPIO10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 21.59 -5.08 180)
+					(length 2.54)
+					(name "GPIO20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 21.59 -8.89 180)
+					(length 2.54)
+					(name "GPIO21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text_box "Pasek LED\n"
+		(exclude_from_sim no)
+		(at 173.99 20.32 0)
+		(size 72.39 137.16)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type dash_dot_dot)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f8098662-2bf0-47cb-bed5-e7e0609b558e")
+	)
+	(junction
+		(at 231.14 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00c7b3e1-04f1-4e31-839b-e8fb69c5ae1f")
+	)
+	(junction
+		(at 231.14 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0232b3f1-da86-4753-9ca5-2c4a5e335d7e")
+	)
+	(junction
+		(at 215.9 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15c50c6b-32a1-4cce-9b42-66a57038081c")
+	)
+	(junction
+		(at 135.89 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2579ffcf-bc11-493d-a207-ee9bd96f8dd5")
+	)
+	(junction
+		(at 215.9 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2a1002d6-a96d-4c2c-b35d-a941958e2390")
+	)
+	(junction
+		(at 231.14 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2b079b3d-6d80-4779-bf6b-24a19cb18277")
+	)
+	(junction
+		(at 198.12 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "339ee408-0ce1-4221-9b8d-42fd99720b95")
+	)
+	(junction
+		(at 182.88 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "354b842d-32b2-4cbe-a756-d981765b7eaf")
+	)
+	(junction
+		(at 198.12 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3d686a34-1e5a-4021-8d2d-f176068fa257")
+	)
+	(junction
+		(at 215.9 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e73205c-674a-4045-9bf0-d901c924da84")
+	)
+	(junction
+		(at 231.14 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4063ad63-66e1-4162-ab3e-1e0edeba4a7c")
+	)
+	(junction
+		(at 116.84 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "442cf997-6f8d-4757-84f1-fe7808badc6f")
+	)
+	(junction
+		(at 182.88 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "44b8c3d8-e88f-454a-898e-2dc6753dade8")
+	)
+	(junction
+		(at 198.12 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "478764f3-e5fa-433d-8299-4c51c439681e")
+	)
+	(junction
+		(at 132.08 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "49754d53-4034-47e9-8abc-966f048ee770")
+	)
+	(junction
+		(at 116.84 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b2fe00b-35a7-481c-8951-eb68ecbffe8e")
+	)
+	(junction
+		(at 215.9 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4d6bba81-dc09-4687-9720-eb015ac853c7")
+	)
+	(junction
+		(at 198.12 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "512c6132-4d13-409e-8cda-e8236c7ea222")
+	)
+	(junction
+		(at 231.14 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5470afe2-fead-452f-b97e-69bd7d42c785")
+	)
+	(junction
+		(at 132.08 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "57e7a971-f2f3-48aa-9a6b-88af21075761")
+	)
+	(junction
+		(at 182.88 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5bdb0980-a335-4b4e-9b8b-7a0965826b31")
+	)
+	(junction
+		(at 198.12 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "695db782-a0a1-4c1a-a844-539d8173c1c9")
+	)
+	(junction
+		(at 182.88 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8b406edb-82b8-4ca4-8487-072dc20a57a5")
+	)
+	(junction
+		(at 215.9 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ee73d65-844e-4a3b-8927-5286631b9d5b")
+	)
+	(junction
+		(at 231.14 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "939606c7-b5d9-444c-b547-e3342cdcd289")
+	)
+	(junction
+		(at 182.88 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bf4952f6-5873-4356-acbc-2df2ae5395bd")
+	)
+	(junction
+		(at 198.12 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c1e1f703-1c0f-4b81-a953-4d23a7570fc5")
+	)
+	(junction
+		(at 182.88 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c26c47ca-2075-40a6-8d13-e8ba31a5b65b")
+	)
+	(junction
+		(at 215.9 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3ef1550-22a5-42e2-91a1-2a46620a7108")
+	)
+	(junction
+		(at 182.88 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c5de7619-473c-4fa7-9e56-db12473471af")
+	)
+	(junction
+		(at 231.14 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ceda8911-58fc-4414-ba1d-4b1c9a9adca8")
+	)
+	(junction
+		(at 198.12 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec4f9bc1-c028-4f9c-ae5c-a5e080c3439f")
+	)
+	(junction
+		(at 182.88 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f24f0e1e-07a3-409e-988f-ebcc6d2c3a9d")
+	)
+	(junction
+		(at 215.9 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f8e854f9-760e-4348-ab89-85df5dac30c1")
+	)
+	(junction
+		(at 198.12 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fab752a8-379c-4925-b9be-d5038b63494e")
+	)
+	(no_connect
+		(at 140.97 60.96)
+		(uuid "01169933-85d2-47f2-abb8-1681e6b33815")
+	)
+	(no_connect
+		(at 168.91 87.63)
+		(uuid "08024deb-0fe1-4572-8ee5-27ed42303b9b")
+	)
+	(no_connect
+		(at 168.91 60.96)
+		(uuid "1176e575-3209-4bd3-b181-8ba15964a84c")
+	)
+	(no_connect
+		(at 140.97 76.2)
+		(uuid "184f3ca9-fe4d-46d3-baa9-9a6faeb8c381")
+	)
+	(no_connect
+		(at 168.91 83.82)
+		(uuid "54906aa5-c61c-42c9-85d2-691d1fe26147")
+	)
+	(no_connect
+		(at 168.91 80.01)
+		(uuid "65a9d263-f08e-4747-8a65-0f0bba431938")
+	)
+	(no_connect
+		(at 140.97 72.39)
+		(uuid "7236aecb-733d-4207-ac32-69d83cface9a")
+	)
+	(no_connect
+		(at 168.91 76.2)
+		(uuid "9d466f2f-6d76-4c9d-89dc-ea56047c685f")
+	)
+	(no_connect
+		(at 140.97 87.63)
+		(uuid "a1f57e29-14f8-409c-937c-6b1d24738e8c")
+	)
+	(no_connect
+		(at 168.91 64.77)
+		(uuid "b0b9029d-1068-414b-a7a3-e5fadbaccd81")
+	)
+	(no_connect
+		(at 140.97 83.82)
+		(uuid "c50c15cb-cb51-429e-bfe4-c573ded40018")
+	)
+	(no_connect
+		(at 168.91 68.58)
+		(uuid "f4ce872a-7dc5-48b1-afd3-e0bf12c7aa17")
+	)
+	(wire
+		(pts
+			(xy 123.19 66.04) (xy 123.19 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "044bd4e6-30c6-4d98-a3be-7e4674e60c38")
+	)
+	(wire
+		(pts
+			(xy 198.12 36.83) (xy 198.12 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "142ac18f-7b4e-448a-915f-b0191c02e1ee")
+	)
+	(wire
+		(pts
+			(xy 135.89 64.77) (xy 135.89 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1750a9f3-5004-4bae-8b3d-ae91639c807b")
+	)
+	(wire
+		(pts
+			(xy 231.14 52.07) (xy 231.14 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1856ed69-68b3-4b42-abb3-93aaaede51c4")
+	)
+	(wire
+		(pts
+			(xy 198.12 82.55) (xy 198.12 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "250020a2-2808-472f-ba8b-df56d7e3800f")
+	)
+	(wire
+		(pts
+			(xy 231.14 25.4) (xy 231.14 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a83c17e-5652-4b2f-9894-210b12f52323")
+	)
+	(wire
+		(pts
+			(xy 182.88 113.03) (xy 182.88 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30d8f0e1-1786-4291-8d05-6b14dec4f5cd")
+	)
+	(wire
+		(pts
+			(xy 182.88 128.27) (xy 182.88 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40e40a5e-af24-4783-8ce7-178acf94e241")
+	)
+	(wire
+		(pts
+			(xy 168.91 72.39) (xy 177.8 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41a94b6c-2f3a-41c6-b509-628a4710dfe3")
+	)
+	(wire
+		(pts
+			(xy 182.88 143.51) (xy 182.88 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "468a5b9e-a65f-493f-8b10-00173e8e2d4c")
+	)
+	(wire
+		(pts
+			(xy 182.88 67.31) (xy 182.88 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49c127c8-e16e-47d2-bc89-68f620293e27")
+	)
+	(wire
+		(pts
+			(xy 132.08 60.96) (xy 132.08 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c188c13-f89c-4e87-a54e-baaabdfad743")
+	)
+	(wire
+		(pts
+			(xy 215.9 153.67) (xy 182.88 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d4acddc-1060-4f0f-a9e8-0e151575c111")
+	)
+	(wire
+		(pts
+			(xy 116.84 60.96) (xy 116.84 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e76fab5-795b-4174-907c-e09d8a54d7a0")
+	)
+	(wire
+		(pts
+			(xy 215.9 143.51) (xy 215.9 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "562b882e-2f9e-4e42-ad9f-22fa99990fac")
+	)
+	(wire
+		(pts
+			(xy 198.12 25.4) (xy 231.14 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5dd695f2-4399-4fc4-af92-fc337d7cb321")
+	)
+	(wire
+		(pts
+			(xy 215.9 97.79) (xy 215.9 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64959a26-13f9-4a2e-8ca1-7a3e0e08d318")
+	)
+	(wire
+		(pts
+			(xy 128.27 80.01) (xy 140.97 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68c14cf3-5863-4c55-9ea2-b71ef97e42f7")
+	)
+	(wire
+		(pts
+			(xy 177.8 29.21) (xy 190.5 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e314385-a36e-4d7a-9b7d-27ac956bcc27")
+	)
+	(wire
+		(pts
+			(xy 128.27 54.61) (xy 123.19 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70ca0f7f-1df6-4742-aee2-b0c4f0f8e3a9")
+	)
+	(wire
+		(pts
+			(xy 215.9 52.07) (xy 215.9 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73fb5bc9-7097-46e2-aacc-f7c0c718fdde")
+	)
+	(wire
+		(pts
+			(xy 190.5 151.13) (xy 210.82 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75a14bc0-b7d6-41f5-8e89-bdd7ca8e1cba")
+	)
+	(wire
+		(pts
+			(xy 116.84 25.4) (xy 132.08 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78370b3b-42b6-4aa5-9f5d-2edd92e30032")
+	)
+	(wire
+		(pts
+			(xy 210.82 29.21) (xy 223.52 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8029305a-c2b4-4678-8115-830ae16d78c1")
+	)
+	(wire
+		(pts
+			(xy 198.12 67.31) (xy 198.12 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8171431e-5a83-49e9-86af-2e6090f04192")
+	)
+	(wire
+		(pts
+			(xy 215.9 36.83) (xy 215.9 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8630e243-d051-4e3f-bdec-bce9f952d8e9")
+	)
+	(wire
+		(pts
+			(xy 116.84 67.31) (xy 123.19 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86fa94c2-96b0-4835-96ea-cde99cffced4")
+	)
+	(wire
+		(pts
+			(xy 123.19 54.61) (xy 123.19 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8df23283-4bbe-463b-b6fb-17f9b0fc682b")
+	)
+	(wire
+		(pts
+			(xy 210.82 151.13) (xy 210.82 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90ee2a8b-e62d-4f55-870a-e5bea46a816d")
+	)
+	(wire
+		(pts
+			(xy 132.08 25.4) (xy 132.08 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90f80c58-2369-4f1b-ba35-3307207c2805")
+	)
+	(wire
+		(pts
+			(xy 182.88 52.07) (xy 182.88 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9114510d-c38c-45d6-866a-bda4386a8c3e")
+	)
+	(wire
+		(pts
+			(xy 198.12 52.07) (xy 198.12 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9849c2b6-d210-4907-beda-78ef188fc768")
+	)
+	(wire
+		(pts
+			(xy 215.9 67.31) (xy 215.9 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9972dcd7-4943-4b42-b72c-022a093f7d22")
+	)
+	(wire
+		(pts
+			(xy 198.12 128.27) (xy 198.12 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99895575-0fba-4d19-bf56-47c8fe4a5a23")
+	)
+	(wire
+		(pts
+			(xy 215.9 128.27) (xy 215.9 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a504d8cd-97a0-46a0-93e9-1f8e7c32509d")
+	)
+	(wire
+		(pts
+			(xy 231.14 113.03) (xy 231.14 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a85af092-3e25-4bf5-bd17-22717f260a91")
+	)
+	(wire
+		(pts
+			(xy 116.84 26.67) (xy 116.84 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8feb71c-8ca6-41f7-aa69-1b42427a092a")
+	)
+	(wire
+		(pts
+			(xy 231.14 82.55) (xy 231.14 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a935fbfd-9d4e-494a-946b-74fcbdcb4669")
+	)
+	(wire
+		(pts
+			(xy 182.88 97.79) (xy 182.88 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afa44572-2623-4d94-b4d9-bea4a90f4346")
+	)
+	(wire
+		(pts
+			(xy 127 60.96) (xy 132.08 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b13f0d08-9d3d-4301-918f-399c22584975")
+	)
+	(wire
+		(pts
+			(xy 198.12 25.4) (xy 198.12 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b21bc34c-db23-4b55-b21b-0dd78a993564")
+	)
+	(wire
+		(pts
+			(xy 198.12 97.79) (xy 198.12 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b54e3f84-de39-4466-af9b-d4227518faad")
+	)
+	(wire
+		(pts
+			(xy 128.27 54.61) (xy 128.27 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5c29e61-56de-4ede-a60a-c2475b12f2b5")
+	)
+	(wire
+		(pts
+			(xy 231.14 128.27) (xy 231.14 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6a4ba21-8033-4116-a73a-01d7de940a3c")
+	)
+	(wire
+		(pts
+			(xy 177.8 72.39) (xy 177.8 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b814061e-40ab-4734-b47f-eff30ab00e9f")
+	)
+	(wire
+		(pts
+			(xy 215.9 82.55) (xy 215.9 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c687ad74-c8ec-42fb-9cf0-5e9d70431c8d")
+	)
+	(wire
+		(pts
+			(xy 116.84 34.29) (xy 116.84 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c787e354-afb1-499e-bbd1-f0cc4f9c6b9d")
+	)
+	(wire
+		(pts
+			(xy 116.84 60.96) (xy 119.38 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c870bc2f-f173-47b4-88be-3be1ddaa16c5")
+	)
+	(wire
+		(pts
+			(xy 140.97 68.58) (xy 132.08 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8d9ea8f-4962-415c-a8d0-c909c56b465e")
+	)
+	(wire
+		(pts
+			(xy 231.14 36.83) (xy 231.14 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc270720-738e-407c-89ea-0a9141bbf51c")
+	)
+	(wire
+		(pts
+			(xy 215.9 113.03) (xy 215.9 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cce60637-a657-46c7-bd91-a06ca7064737")
+	)
+	(wire
+		(pts
+			(xy 182.88 36.83) (xy 182.88 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfe95043-0cd9-4deb-b514-204bdefc02b8")
+	)
+	(wire
+		(pts
+			(xy 116.84 36.83) (xy 135.89 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d543e90b-0fdb-4552-bc31-7f9d0f2f02a2")
+	)
+	(wire
+		(pts
+			(xy 132.08 25.4) (xy 198.12 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db7de760-c78e-4a08-89f6-d42cd3c6d29a")
+	)
+	(wire
+		(pts
+			(xy 182.88 82.55) (xy 182.88 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "def59a05-b198-4d94-895c-a91b4af51208")
+	)
+	(wire
+		(pts
+			(xy 116.84 36.83) (xy 116.84 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1f660c7-58d3-43a4-804d-0b1addf51c82")
+	)
+	(wire
+		(pts
+			(xy 140.97 64.77) (xy 135.89 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea5f8b04-657d-46b0-9ac9-b25654485929")
+	)
+	(wire
+		(pts
+			(xy 135.89 36.83) (xy 182.88 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee4c5051-890c-4910-9278-5da8f809952b")
+	)
+	(wire
+		(pts
+			(xy 198.12 113.03) (xy 198.12 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f822589b-78ee-4831-90a8-b467d3d59df4")
+	)
+	(wire
+		(pts
+			(xy 231.14 67.31) (xy 231.14 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa6f579f-6ebe-4214-89a1-f2733bc32fa6")
+	)
+	(wire
+		(pts
+			(xy 231.14 97.79) (xy 231.14 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "faca956d-f7c2-4c96-a832-cc0fb5268232")
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 190.5 97.79 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0627b3e5-1ed3-469d-bb31-d082f85c219f")
+		(property "Reference" "D5"
+			(at 203.2 91.3698 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 203.2 93.9098 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 180.975 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 190.5 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "bed894bc-cd37-4f77-99a0-2d71199d58bd")
+		)
+		(pin "2"
+			(uuid "9ff6db83-af8c-4e37-afe9-f8f55bc4b621")
+		)
+		(pin "3"
+			(uuid "fefbbea9-b327-4138-9f74-f08f5a6a14a5")
+		)
+		(pin "1"
+			(uuid "f6dc8ba4-29e8-4066-84af-5f7a20524dc4")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 223.52 52.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "084e6447-080c-4463-8d15-c13857438b79")
+		(property "Reference" "D10"
+			(at 236.22 45.6498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 236.22 48.1898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 213.995 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 223.52 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "f2a10d1a-b2ae-44d1-829a-27b09da2090c")
+		)
+		(pin "2"
+			(uuid "ac377337-0583-4893-93f2-55c9e310ecd5")
+		)
+		(pin "3"
+			(uuid "3fb89ca5-bb45-4fde-aef5-49c7a0f156f2")
+		)
+		(pin "1"
+			(uuid "09aa37f9-7345-4b43-a157-bb6a850ead2e")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 223.52 36.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36c60579-bea3-45be-bc0e-2474ec4ddb1a")
+		(property "Reference" "D9"
+			(at 236.22 30.4098 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 236.22 32.9498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 213.995 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 223.52 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "cf7fed79-e678-4b6a-a32d-af1c741c4c2b")
+		)
+		(pin "2"
+			(uuid "94607ebf-6c2f-402b-b869-a62e00db54be")
+		)
+		(pin "3"
+			(uuid "37a978dc-642c-478c-86e4-681d98684a6d")
+		)
+		(pin "1"
+			(uuid "3f8f16f8-fbbc-4aac-a3ae-2e8a4b5a175e")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 190.5 143.51 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3a113a67-0d87-4d25-9c02-28ad3fd27496")
+		(property "Reference" "D8"
+			(at 203.2 137.0898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 203.2 139.6298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 180.975 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 190.5 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "bb04f946-9920-4f06-9632-bb4321a1d15f")
+		)
+		(pin "2"
+			(uuid "37a45a69-426c-4735-81f2-4d0d4a2ececc")
+		)
+		(pin "3"
+			(uuid "0dd097ac-8e6a-4fa1-b6ea-2d8918331e03")
+		)
+		(pin "1"
+			(uuid "0a49aa19-c989-4b75-b6c4-2da37f62c4d2")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 223.52 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "51392389-bf3a-46dc-9d4c-59c54549030b")
+		(property "Reference" "D15"
+			(at 236.22 121.8498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 236.22 124.3898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 213.995 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 223.52 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "23f0d20c-845e-4e4e-879d-769d6c07177c")
+		)
+		(pin "2"
+			(uuid "26fe9a61-8a58-4f24-9773-34a5609761d2")
+		)
+		(pin "3"
+			(uuid "9b4a2099-7a25-4c95-a5d4-32470d1e429d")
+		)
+		(pin "1"
+			(uuid "ea7a7423-bfcb-4c96-baa1-ffa47c74e8fb")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:HallGenerator")
+		(at 123.19 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "53964a46-55b7-480b-8682-2a472d23a5e7")
+		(property "Reference" "HG1"
+			(at 106.68 54.356 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "HallGenerator"
+			(at 106.68 56.896 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hall effect generator"
+			(at 123.19 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d08c23bf-585d-4468-b150-79ad3f1c81ca")
+		)
+		(pin "4"
+			(uuid "da4271c5-3ff4-486d-b40c-995a989be6a9")
+		)
+		(pin "3"
+			(uuid "6e243b9f-6681-411c-bf74-897ef52d64be")
+		)
+		(pin "1"
+			(uuid "2d74529c-2866-4ffc-bc6c-889be34c7703")
+		)
+		(instances
+			(project ""
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "HG1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 190.5 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "736b97f0-6c38-4eaa-8453-8192e543bb2c")
+		(property "Reference" "D7"
+			(at 203.2 121.8498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 203.2 124.3898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 180.975 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 190.5 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "cadb11c3-bd3a-4b3d-9ffb-1d67e4157c69")
+		)
+		(pin "2"
+			(uuid "80d32574-5c3d-4d0d-86c6-526dfb655128")
+		)
+		(pin "3"
+			(uuid "9ae3d81b-b7e0-447b-bdfb-b855b7f58473")
+		)
+		(pin "1"
+			(uuid "7abda5f4-713c-494d-bca2-b3e83a42075a")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 190.5 52.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "74157586-f469-4811-b07e-b7eedb135fd7")
+		(property "Reference" "D2"
+			(at 200.66 45.6498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 200.66 48.1898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 180.975 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 190.5 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "02191e27-2a2c-4d76-9cfe-1655f72733e8")
+		)
+		(pin "2"
+			(uuid "95d42779-6a11-4e83-a17e-4bdd4de8bc83")
+		)
+		(pin "3"
+			(uuid "dcc8a41d-8952-4c31-9aed-a31f236ee6ce")
+		)
+		(pin "1"
+			(uuid "e64d23b0-3f91-4afc-aee4-28dfbbef7caf")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 223.52 67.31 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d82f405-aacb-4f00-a95f-e48c556ad6c7")
+		(property "Reference" "D11"
+			(at 236.22 60.8898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 236.22 63.4298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 213.995 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 223.52 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "69cc7cb8-e55a-4889-9c15-41a2aa04abd7")
+		)
+		(pin "2"
+			(uuid "c4bf6f31-814f-493c-ae5a-4d936d7e4ab4")
+		)
+		(pin "3"
+			(uuid "3b524c05-f07f-47be-8d15-2b809a1c95c8")
+		)
+		(pin "1"
+			(uuid "98809687-9fac-4f45-a35c-ae214fb1d9c2")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 190.5 113.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8cb7990e-83c4-4a39-aa1c-8c072ef1bd1c")
+		(property "Reference" "D6"
+			(at 203.2 106.6098 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 203.2 109.1498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 180.975 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 190.5 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "c962bb7a-cfad-41cc-8eea-ac790d8dde4f")
+		)
+		(pin "2"
+			(uuid "2fd7872c-aa9e-4d5e-98b0-fa1889a546c4")
+		)
+		(pin "3"
+			(uuid "f9031806-276c-4684-8837-54309a19d201")
+		)
+		(pin "1"
+			(uuid "94964336-b407-4fb8-8eb9-a4f157219cca")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MCU_Espressif:ESP32-C3")
+		(at 147.32 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8fba480b-f7f0-4e74-b14a-5fc5fa7b9ba4")
+		(property "Reference" "U1"
+			(at 154.94 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ESP32-C3 mini"
+			(at 154.94 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm"
+			(at 147.828 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf"
+			(at 147.828 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RF Module, ESP32 SoC, RISC-V, WiFi 802.11b/n/g, Bluetooth LE 5, QFN32"
+			(at 147.828 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "10"
+			(uuid "67d93c70-98db-4d4d-9a4a-65e1128d7065")
+		)
+		(pin "3"
+			(uuid "23c70a91-8c2a-4f43-a6b0-89648106faa2")
+		)
+		(pin "0"
+			(uuid "3610e442-4b6d-407b-8b5b-2eb701ec8ebe")
+		)
+		(pin ""
+			(uuid "f2d9f332-a21b-4a85-9fea-21608203f2b4")
+		)
+		(pin "6"
+			(uuid "81a4ca5d-642f-450b-b669-41067d456b3e")
+		)
+		(pin "8"
+			(uuid "1c9dfa79-bc01-466f-b31b-7ad2bfbae99d")
+		)
+		(pin ""
+			(uuid "f3b35a5a-6c23-4021-97fd-f4855d2b881d")
+		)
+		(pin "4"
+			(uuid "cdc4de28-eff3-4776-88e7-0f4962bf3aeb")
+		)
+		(pin "5"
+			(uuid "de883e07-4f33-4c32-a2d9-01e2a5c89a9c")
+		)
+		(pin ""
+			(uuid "88098fb3-33d9-4b9e-9bae-0d4b4392c0ea")
+		)
+		(pin "2"
+			(uuid "87d0b648-04de-46ae-a4e0-092093845f86")
+		)
+		(pin "3"
+			(uuid "6de29dfb-529c-47fd-8ef4-4d4eafe24226")
+		)
+		(pin "9"
+			(uuid "869ae4b0-db6a-4175-8395-d956e60cb54f")
+		)
+		(pin "7"
+			(uuid "5648917c-cd6b-4e4b-85df-ad62dff4ffa3")
+		)
+		(pin "20"
+			(uuid "63fd497b-ef00-4ed1-8856-31e5a89dbb27")
+		)
+		(pin "1"
+			(uuid "c4c53670-77c1-482d-9c3a-00c7f6ffe065")
+		)
+		(pin "21"
+			(uuid "80619b6c-1d7d-4371-a148-15dee292ef98")
+		)
+		(instances
+			(project ""
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 190.5 82.55 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "982820f1-0e05-417e-a4c8-1001c274db43")
+		(property "Reference" "D4"
+			(at 203.2 76.1298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 203.2 78.6698 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 180.975 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 190.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "9559a3b3-f827-4eac-a877-fda7797296d4")
+		)
+		(pin "2"
+			(uuid "d8eada85-02ae-4ceb-9922-8757c0121a49")
+		)
+		(pin "3"
+			(uuid "300e0e5b-3879-43b5-bdaa-75465a4b3111")
+		)
+		(pin "1"
+			(uuid "85dd1429-8365-43b3-9254-354a701aef0d")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 190.5 36.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a2861a5e-113c-4b83-9b1f-e4b9e3584245")
+		(property "Reference" "D1"
+			(at 200.66 30.4098 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 200.66 32.9498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 180.975 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 190.5 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "83dff22f-3670-4275-a44c-357f787d19c6")
+		)
+		(pin "2"
+			(uuid "dfe59898-92b0-4d5d-bcfb-29ded18c5825")
+		)
+		(pin "3"
+			(uuid "33cc2eff-b342-4c3a-a139-26283390e712")
+		)
+		(pin "1"
+			(uuid "8c04a97d-6316-495c-b075-0a44d6c4840a")
+		)
+		(instances
+			(project ""
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 223.52 113.03 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a745ecb8-6a28-446b-b6b9-a63ca0c4de7d")
+		(property "Reference" "D14"
+			(at 236.22 106.6098 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 236.22 109.1498 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 213.995 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 223.52 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "37eaf79f-72e6-46da-b3a4-2ff1d2a80165")
+		)
+		(pin "2"
+			(uuid "caa31632-ab69-4335-a282-021b8845ad90")
+		)
+		(pin "3"
+			(uuid "4a3ad206-ccf1-4cc6-a706-37b8c06aa62b")
+		)
+		(pin "1"
+			(uuid "0a521a1d-25ff-4b66-8615-da4d267dc914")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 223.52 82.55 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a9d457e9-b9d1-4940-bf96-d9a1b2678ca8")
+		(property "Reference" "D12"
+			(at 236.22 76.1298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 236.22 78.6698 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 213.995 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 223.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "0597d24a-d7a0-4c4a-92b9-564f964008ee")
+		)
+		(pin "2"
+			(uuid "3c48ee71-8105-48f1-8ea0-e4a9d158a830")
+		)
+		(pin "3"
+			(uuid "bd4e6f2f-5fdc-4447-bf50-f75ac47e80d5")
+		)
+		(pin "1"
+			(uuid "cc3f0499-c436-41cc-a58e-3a524f715ebb")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 190.5 67.31 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab2c0279-552c-43ea-9bc6-c4f31c8ae413")
+		(property "Reference" "D3"
+			(at 200.66 60.8898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 200.66 63.4298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 180.975 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 190.5 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "61236e61-ab38-40fc-b080-8600c66965de")
+		)
+		(pin "2"
+			(uuid "258112e5-1713-42f1-9722-934f819fe2d2")
+		)
+		(pin "3"
+			(uuid "fab07e70-8d5b-4305-a8db-d01e67fc669e")
+		)
+		(pin "1"
+			(uuid "3124cd78-fe61-4434-b7c2-7f18d8423c28")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 223.52 97.79 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ad2291d2-bbd6-488e-8061-0a5a0e8126b0")
+		(property "Reference" "D13"
+			(at 236.22 91.3698 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 236.22 93.9098 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 213.995 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 223.52 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "0368acf3-8f6b-4b54-9485-70d6195431f4")
+		)
+		(pin "2"
+			(uuid "fc3a833e-aa9a-4b8b-874a-321afe7753b3")
+		)
+		(pin "3"
+			(uuid "a72255bb-b3a9-431e-b63c-ce4f5cc6918c")
+		)
+		(pin "1"
+			(uuid "bf4c31cb-7b37-4842-95ba-e64d2d00bdcc")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 116.84 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc33ad66-9516-4e4f-a50a-bf4835827b92")
+		(property "Reference" "BT1"
+			(at 108.458 27.686 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Akumulator"
+			(at 101.6 30.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 30.226 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 116.84 30.226 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single-cell battery"
+			(at 116.84 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "adb1a1c5-622e-41e8-8fd1-bb447b531583")
+		)
+		(pin "2"
+			(uuid "38e044d6-2c3e-478c-8666-e4409240accf")
+		)
+		(instances
+			(project ""
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "BT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:NeoPixel_THT")
+		(at 223.52 143.51 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce9cd017-3ffc-4511-b0a7-c411397e520e")
+		(property "Reference" "D16"
+			(at 236.22 137.0898 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NeoPixel"
+			(at 236.22 139.6298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.adafruit.com/product/1938"
+			(at 213.995 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller, 5mm/8mm LED package"
+			(at 223.52 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "f1bad3a0-b721-4cac-9d49-ea48e193b0cd")
+		)
+		(pin "2"
+			(uuid "856d5b1f-7ce2-4235-b185-0c21b8b92a27")
+		)
+		(pin "3"
+			(uuid "a4e3ae64-909e-4d57-b5b6-f3f42d3039b4")
+		)
+		(pin "1"
+			(uuid "b43ec75f-bb68-4eb4-b419-9ee45d921e75")
+		)
+		(instances
+			(project "schemat_polaczen"
+				(path "/3708e0e8-860a-414b-a956-0e6783e251a6"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

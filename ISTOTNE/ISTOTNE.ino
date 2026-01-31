@@ -197,7 +197,7 @@ void setup() {
   strip.begin();
   strip.show();
   PrzeksztalcBitmape();
-  FiltrMedianowy();
+  //FiltrMedianowy();
   //Filtr();
 }
 bool wyswietl = true;
@@ -257,14 +257,14 @@ void FunkcjaKtoraWyswietlaCalaMacierz(uint32_t opoznienie)
 {
   uint32_t color = strip.Color(250, 0, 0);
   //for(int j=0; j<rozdzielczosc_filtrowana; j++)
-  for(int j=0; j<rozdzielczosc_filtrowana; j++)
+  for(int j=0; j<rozdzielczosc; j++)
   {
     //if(analogRead(A2) > 470)
     //{
       for(int i=0; i<strip.numPixels(); i++)
       {
-        //WyswietlBitmape(j, i, color);
-        WyswietlBitmapeFiltrowana(j, i, color);
+        WyswietlBitmape(j, i, color);
+        //WyswietlBitmapeFiltrowana(j, i, color);
       }
     //}
     //else{break;}
@@ -373,7 +373,7 @@ void Filtr(){
   }
 }
 
-uint16_t median9(uint16_t *v) {
+uint16_t mediana(uint16_t *v) {
   for (int i = 0; i < 8; i++) {
     for (int j = i + 1; j < 9; j++) {
       if (v[j] < v[i]) {
@@ -385,7 +385,7 @@ uint16_t median9(uint16_t *v) {
   }
   return v[4];
 }
-uint16_t average9(uint16_t *v, uint16_t d) {
+uint16_t srednia(uint16_t *v, uint16_t d) {
     uint32_t sum = 0;
     for(int i = 0; i < 9; i++) {
         sum += v[i];
@@ -395,32 +395,7 @@ uint16_t average9(uint16_t *v, uint16_t d) {
 
 
 
-void FiltrLalala(){
-  uint16_t window[9];
-  for(int a = 1; a<=rozdzielczosc_filtrowana-1; a++)
-  {
-    for(int b = 1; b <= 34-1; b++)
-    {
-      for(int c = 0; c<3; c++)
-      {
-        if(a > 0 && a <= rozdzielczosc_filtrowana-1)
-        {
-           int k = 0;
-          //bitmapa_filtrowana[a][b][c] = median9(bitmapa_przeksztalcona[a][b][c]+bitmapa_przeksztalcona[a+1][b][c]+bitmapa_przeksztalcona[a+2][b][c]
-          //                              +bitmapa_przeksztalcona[a][b+1][c]+bitmapa_przeksztalcona[a+1][b+1][c]+bitmapa_przeksztalcona[a+2][b+1][c]
-          //                              +bitmapa_przeksztalcona[a][b+2][c]+bitmapa_przeksztalcona[a+1][b+2][c]+bitmapa_przeksztalcona[a+2][b+2][c]);
-          for (int dy = -1; dy <= 1; dy++) {
-            for (int dx = -1; dx <= 1; dx++) {
-              window[k++] = bitmapa_przeksztalcona[a + dy][b + dx][c];
-            }
-            bitmapa_filtrowana[a][b][c] = median9(window);
-          }
-        }
-      }
-    }
-  }
-}
-void FiltrMedianowy()
+void FiltrUsredniajacyMedianowy()
 {
   uint16_t window[9];
   uint16_t waga[9] = {5, 1, 1, 1, 1, 1, 1, 1, 1};
@@ -442,7 +417,7 @@ void FiltrMedianowy()
         window[k++] = waga[k]*bitmapa_przeksztalcona[a+2][b][c];
         window[k++] = waga[k]*bitmapa_przeksztalcona[a+2][b+1][c];
         window[k++] = waga[k]*bitmapa_przeksztalcona[a+2][b+2][c];
-        bitmapa_filtrowana[a][b][c] = median9(window);  //, suma_wagi);
+        bitmapa_filtrowana[a][b][c] = mediana(window);  //, suma_wagi);
       }
     }
   }

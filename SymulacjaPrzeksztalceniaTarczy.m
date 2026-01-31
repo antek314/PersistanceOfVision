@@ -147,11 +147,10 @@ end
 
 
 theta = linspace(0, 2*pi, 360);
-r1 = 9 + 16;  % Promień 25
-r2 = 9;       % Promień 9
-r3 = 34;      % Promień 34
+r1 = 9 + 16;
+r2 = 9;
+r3 = 34;
 
-% Oblicz współrzędne okręgów
 x1 = r1 * cos(theta);
 y1 = r1 * sin(theta);
 x2 = r2 * cos(theta);
@@ -159,15 +158,12 @@ y2 = r2 * sin(theta);
 x3 = r3 * cos(theta);
 y3 = r3 * sin(theta);
 
-% Utwórz nowe okno figurę
-%figure('Position', [100, 100, 800, 800]);
-%hold on;
+
 grid on;
 box on;
 
-% Narysuj okręgi z różnymi stylami
 plot(x1, y1, 'g-', 'LineWidth', 2.5, 'DisplayName', sprintf('r = %d', r1));
-plot(x2, y2, 'b--', 'LineWidth', 2, 'DisplayName', sprintf('r = %d', r2));
+plot(x2, y2, 'g--', 'LineWidth', 2, 'DisplayName', sprintf('r = %d', r2));
 plot(x3, y3, 'b-.', 'LineWidth', 2, 'DisplayName', sprintf('r = %d', r3));
 
 fill_0_r2_x = [0, x2, 0];

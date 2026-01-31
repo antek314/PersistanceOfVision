@@ -5,7 +5,7 @@ zdj = cv2.imread('C:/Users/anton/OneDrive/Desktop/Informatics/PersistanceOfVisio
 
 cv2.namedWindow("window")
 zdjecie = cv2.resize(src= zdj, 
-                          dsize =(53, 53), 
+                          dsize =(50, 50), 
                           interpolation=cv2.INTER_AREA)
 
 zdjecie_ = cv2.resize(src= zdjecie, 

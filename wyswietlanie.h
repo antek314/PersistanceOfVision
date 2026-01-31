@@ -40,30 +40,3 @@ void Napisz(uint32_t c, uint8_t wait, char znak, int i, int j)
   if(znak == '9'){Napisz_I(i , j, c, wait);}
   if(znak == '0'){Napisz_J(i , j, c, wait);}
 }
-
-
-void AnimacjaUsmiech(uint32_t kolor, uint8_t wait, int g, int i, int j)
-{
-  // Zakładamy: i = 0–15 (pion), j = 1–6 (kolumna), g = 0–4 (klatka)
-  
-  // Oczy - zmieniają się co klatkę (mruganie)
-  if ((j == 2 && (i == 5 || i == 10)) || (j == 4 && (i == 5 || i == 10))) {
-    if (g % 2 == 0) {
-      strip.setPixelColor(i, kolor); // oczy otwarte
-    } else {
-      strip.setPixelColor(i, 0); // oczy zamknięte (czarne)
-    }
-  }
-
-  // Uśmiech - porusza się w prawo i lewo z klatki na klatkę
-  if ((j == 3 || j == 4) && i == (11 + (g % 2))) {
-    strip.setPixelColor(i, kolor);
-  }
-
-  // Policzki - migają na końcach
-  if ((j == 1 && i == 7) || (j == 6 && i == 8)) {
-    if (g % 2 == 1) {
-      strip.setPixelColor(i, strip.Color(255, 0, 0)); // czerwone policzki
-    }
-  }
-}

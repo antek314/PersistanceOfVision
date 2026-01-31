@@ -1,3 +1,13 @@
+#include <Adafruit_NeoPixel.h>
+#include <string.h>
+#include<math.h>
+
+
+#define BUTTON_PIN   11
+#define PIXEL_PIN 8
+#define PIXEL_COUNT 17
+
+uint16_t bitmapa[50][50][3] = 
 {
 {
 {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0} 
@@ -149,4 +159,181 @@
 {
 {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0} 
 }
+};
+
+int licznik =  0;
+int klatka = 250;
+unsigned long poprzedniCzas = 0;
+unsigned long czas = 0;
+unsigned long czasObrotu = 0;
+uint32_t czasOpoznienia = 0;
+const uint16_t rozdzielczosc = 108;
+
+
+uint16_t bitmapa_przeksztalcona[rozdzielczosc][34][3] = {0};
+// Parameter 1 = number of pixels in strip,  neopixel stick has 8
+// Parameter 2 = pin number (most are valid)
+// Parameter 3 = pixel type flags, add together as needed:
+//   NEO_RGB     Pixels are wired for RGB bitstream
+//   NEO_GRB     Pixels are wired for GRB bitstream, correct for neopixel stick
+//   NEO_KHZ400  400 KHz bitstream (e.g. FLORA pixels)
+//   NEO_KHZ800  800 KHz bitstream (e.g. High Density LED strip), correct for neopixel stick
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(A2, INPUT);
+  strip.begin();
+  strip.show();
+  PrzeksztalcBitmape();
+  //FiltrMedianowy();
+  //Filtr();
 }
+bool wyswietl = true;
+
+void loop() {
+  if((analogRead(A2) < 470) && wyswietl){
+  //while(true){
+    czas = micros();
+    //licznik = Animacja(czasOpoznienia, licznik, klatka);
+    //Wyswietl(czasOpoznienia, "zupa", "halo");
+
+// liczenie predkosci
+/*******************************************/
+    /*czasObrotu = czas - poprzedniCzas;
+
+    char predkosc[10] = "";
+    sprintf(predkosc, "%lu", czasObrotu); // %lu = unsigned long
+    Wyswietl(750, "wzor", predkosc);
+
+    poprzedniCzas = czas;*/
+
+/*******************************************/
+
+
+// regulacja opoznienia
+/*******************************************/
+    czasObrotu = czas - poprzedniCzas;
+    //float x = 0.00001666;
+    float a = 0.023125;
+    float b = 968.75;
+    float wynik = czasObrotu * a - b; 
+    czasOpoznienia = static_cast<uint32_t>(wynik);
+    czasOpoznienia = 9;
+    /****************/
+    char opoznienie[10] = "";
+    //sprintf(opoznienie, "%lu", czasOpoznienia); 
+    // %lu = unsigned long
+    /**************/
+/*******************************************/
+
+
+    FunkcjaKtoraWyswietlaCalaMacierz(czasOpoznienia);
+    
+    //Wyswietl(czasOpoznienia, "wzor", "a");
+    poprzedniCzas = czas;
+
+/******************************************/
+  //wyswietl = false;
+  }
+  // if((analogRead(A2) < 470) && !wyswietl){
+  //   delayMicroseconds(10000);
+  //   wyswietl = true;
+  // }
+}
+
+void FunkcjaKtoraWyswietlaCalaMacierz(uint32_t opoznienie)
+{
+  uint32_t color = strip.Color(250, 0, 0);
+  for(int j=0; j<rozdzielczosc; j++)
+  {
+    //if(analogRead(A2) > 470)
+    //{
+      for(int i=0; i<strip.numPixels(); i++)
+      {
+        WyswietlBitmape(j, i, color);
+      }
+    //}
+    //else{break;}
+    strip.show();
+    //delay(wait);
+    //if(opoznienie>4000){opoznienie = 4000;}
+    delayMicroseconds(opoznienie);
+  }
+}
+void WyswietlBitmape(int j, int i, uint32_t c)
+{
+  if((bitmapa_przeksztalcona[j][i+9][0]!=0 || bitmapa_przeksztalcona[j][i+9][1]!=0 || bitmapa_przeksztalcona[j][i+9][2]!=0) && (j<rozdzielczosc-1))
+  {
+      uint32_t color = strip.Color(bitmapa_przeksztalcona[j][i+9][2], bitmapa_przeksztalcona[j][i+9][1], bitmapa_przeksztalcona[j][i+9][0]);
+      strip.setPixelColor(i, color);
+  }
+  else
+  {
+    strip.setPixelColor(i, 0);
+  }
+}
+
+
+void PrzeksztalcBitmape()
+{
+  for(int a = 0; a<50; a++)
+  {
+    for(int b = 0; b < 50; b++)
+    {
+      if((bitmapa[a][b][0]>0) || (bitmapa[a][b][1]>0) || (bitmapa[a][b][2]>0))
+      {
+        int x = a-24;
+        int y = b-24;
+          double phi;
+          if((x>0) && (y>=0))
+          {
+            phi = atan((double)y/x);
+          }
+          if((x>0) && (y<0))
+          {
+            phi = atan((double)y/x) + 6.2831853;
+          }
+          if(x<0)
+          {
+            phi = atan((double)y/x) + 3.14159265;
+          }
+          if((x==0) && (y>0))
+          {
+            phi = 3.14159265/2;
+          }
+          if((x==0) && (y<0))
+          {
+            phi = 4.71238898;  //3.14159265 * 3/2;
+          }
+          int promien = (int)round((sqrt((x * x) + (y * y)))); ///2);
+          double dzielnik = (2*3.14159265)/rozdzielczosc;
+          //double dzielnik = (2*3.14)/rozdzielczosc;
+          int wyn = (int)round(phi / dzielnik); // 2*pi/108
+          bitmapa_przeksztalcona[wyn][promien][0] = bitmapa[a][b][0];
+          bitmapa_przeksztalcona[wyn][promien][1] =  bitmapa[a][b][1];
+          bitmapa_przeksztalcona[wyn][promien][2] =  bitmapa[a][b][2];
+      }
+    }
+  }
+}
+void Filtr(){
+  for(int a = 0; a<rozdzielczosc; a++)
+  {
+    for(int b = 0; b < 34; b++)
+    {
+      for(int c = 0; c<3; c++)
+      {
+        if(a > 0 && a < rozdzielczosc-1)
+        {
+          if((bitmapa_przeksztalcona[a-1][b][c] > 0) && (bitmapa_przeksztalcona[a-1][b][c] == bitmapa_przeksztalcona[a+1][b][c]))
+          {
+            bitmapa_przeksztalcona[a][b][c] = bitmapa_przeksztalcona[a-1][b][c];
+          }
+        }
+
+      }
+    }
+  }
+}
+
